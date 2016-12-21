@@ -10,6 +10,10 @@
 		E8653A7F1E09DEF10002D5B0 /* Bank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8653A751E09DEF10002D5B0 /* Bank.framework */; };
 		E8653A841E09DEF10002D5B0 /* BankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653A831E09DEF10002D5B0 /* BankTests.swift */; };
 		E8653A861E09DEF10002D5B0 /* Bank.h in Headers */ = {isa = PBXBuildFile; fileRef = E8653A781E09DEF10002D5B0 /* Bank.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8653A901E09DEFA0002D5B0 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653A8F1E09DEFA0002D5B0 /* Main.swift */; };
+		E8653A921E09DF210002D5B0 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653A911E09DF210002D5B0 /* Bank.swift */; };
+		E8653A941E09DF2A0002D5B0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653A931E09DF2A0002D5B0 /* Person.swift */; };
+		E8653A961E09DF310002D5B0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653A951E09DF310002D5B0 /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		E8653A7E1E09DEF10002D5B0 /* BankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8653A831E09DEF10002D5B0 /* BankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTests.swift; sourceTree = "<group>"; };
 		E8653A851E09DEF10002D5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8653A8F1E09DEFA0002D5B0 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		E8653A911E09DF210002D5B0 /* Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		E8653A931E09DF2A0002D5B0 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E8653A951E09DF310002D5B0 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				E8653A781E09DEF10002D5B0 /* Bank.h */,
+				E8653A8F1E09DEFA0002D5B0 /* Main.swift */,
+				E8653A911E09DF210002D5B0 /* Bank.swift */,
+				E8653A931E09DF2A0002D5B0 /* Person.swift */,
+				E8653A951E09DF310002D5B0 /* Account.swift */,
 				E8653A791E09DEF10002D5B0 /* Info.plist */,
 			);
 			path = Bank;
@@ -148,6 +160,7 @@
 				TargetAttributes = {
 					E8653A741E09DEF10002D5B0 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					E8653A7D1E09DEF10002D5B0 = {
@@ -196,6 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8653A941E09DF2A0002D5B0 /* Person.swift in Sources */,
+				E8653A961E09DF310002D5B0 /* Account.swift in Sources */,
+				E8653A901E09DEFA0002D5B0 /* Main.swift in Sources */,
+				E8653A921E09DF210002D5B0 /* Bank.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +337,7 @@
 		E8653A8A1E09DEF10002D5B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dayj.Bank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +357,7 @@
 		E8653A8B1E09DEF10002D5B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +376,7 @@
 		E8653A8D1E09DEF10002D5B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BankTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dayj.BankTests;
@@ -367,6 +388,7 @@
 		E8653A8E1E09DEF10002D5B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BankTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dayj.BankTests;
