@@ -115,8 +115,19 @@ class BankTests: XCTestCase {
         XCTAssertTrue(bank2.name == "Chase")
         XCTAssertTrue(bank2.address == "123 somewhere lane")
         XCTAssertTrue(bank2.transactions.first!.amount == 3.0)
+        XCTAssertTrue(bank2.transactions.first!.date == bank.transactions.first!.date)
         XCTAssertTrue(bank2.accounts.first!.owner.lastName == "Shmoe")
 
+    }
+    
+    func testBankGetAccountsForCustomer() {
+        let bank = Bank(name: "Chase", address: "123 somewhere lane")
+        let customer = Customer(firstName: "Joe", lastName: "Shmoe", emailAddress: "jshmoe@netscape.com")
+        _ = bank.addNewAccount(owner: customer, type: .checking)
+        _ = bank.addNewAccount(owner: customer, type: .saving)
+        print(bank.getAllAccounts(ofType: nil, forCustomer: customer).map { $0.accountNumber})
+        print(bank.getAllAccounts(ofType: .checking, forCustomer: customer).map { $0.accountNumber})
+        print(bank.getAllAccounts(ofType: .saving, forCustomer: customer).map { $0.accountNumber})
     }
     
 }

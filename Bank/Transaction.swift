@@ -22,18 +22,12 @@ struct Transaction {
     
     var jsonData: [String: Any] {
         // date format 2016-12-22 04:21:14 +0000
-        var propertyDictionary: [String: Any] = ["account": account.accountNumber, "amount" : amount, "vendor" : vendor, "date": date.description, "type": type.rawValue]
-        print(propertyDictionary["date"] as! String)
+        var propertyDictionary: [String: Any] = ["account": account.accountNumber, "amount" : amount, "vendor" : vendor, "date": date.timeIntervalSinceReferenceDate, "type": type.rawValue]
         if note == nil {
             propertyDictionary["note"] = "nil"
         } else {
             propertyDictionary["note"] = note
         }
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .short
-        let stringDate = formatter.string(from: date)
-        propertyDictionary["date"] = stringDate
         
         return propertyDictionary
     }
@@ -54,13 +48,7 @@ struct Transaction {
         account = bank.accounts.filter {$0.accountNumber == parentAccountNumber }.first!
         amount = propertyDictionary["amount"] as! Double
         vendor = propertyDictionary["vendor"] as! String
-        let stringDate = propertyDictionary["date"] as! String
-        
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .short
-        date = formatter.date(from: stringDate)!
-        
+        date = Date(timeIntervalSinceReferenceDate: propertyDictionary["date"] as! Double)
         let typeString = propertyDictionary["type"] as! String
         type = TransactionType.init(rawValue: typeString)!
     }

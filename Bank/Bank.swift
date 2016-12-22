@@ -59,9 +59,9 @@ class Bank {
         case .none:
             return accounts.filter { $0.owner === customer }
         case .some(.saving):
-            return accounts.filter { $0.owner === customer }
+            return accounts.filter { $0.owner === customer && $0.accountType == .saving }
         case .some(.checking):
-            return accounts.filter { $0.owner === customer }
+            return accounts.filter { $0.owner === customer && $0.accountType == .checking}
         }
     }
     
