@@ -14,6 +14,11 @@
 		E8653A921E09DF210002D5B0 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653A911E09DF210002D5B0 /* Bank.swift */; };
 		E8653A941E09DF2A0002D5B0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653A931E09DF2A0002D5B0 /* Person.swift */; };
 		E8653A961E09DF310002D5B0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653A951E09DF310002D5B0 /* Account.swift */; };
+		E8653ABE1E0AEA050002D5B0 /* SavingsAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653ABD1E0AEA050002D5B0 /* SavingsAccount.swift */; };
+		E8653AC01E0AEA0B0002D5B0 /* CheckingAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653ABF1E0AEA0B0002D5B0 /* CheckingAccount.swift */; };
+		E8653AC21E0AEC1E0002D5B0 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653AC11E0AEC1E0002D5B0 /* Employee.swift */; };
+		E8653AC41E0AEC250002D5B0 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653AC31E0AEC250002D5B0 /* Customer.swift */; };
+		E8653AC61E0AF4170002D5B0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8653AC51E0AF4170002D5B0 /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,11 @@
 		E8653A911E09DF210002D5B0 /* Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		E8653A931E09DF2A0002D5B0 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E8653A951E09DF310002D5B0 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E8653ABD1E0AEA050002D5B0 /* SavingsAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsAccount.swift; sourceTree = "<group>"; };
+		E8653ABF1E0AEA0B0002D5B0 /* CheckingAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckingAccount.swift; sourceTree = "<group>"; };
+		E8653AC11E0AEC1E0002D5B0 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		E8653AC31E0AEC250002D5B0 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		E8653AC51E0AF4170002D5B0 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +92,13 @@
 				E8653A781E09DEF10002D5B0 /* Bank.h */,
 				E8653A8F1E09DEFA0002D5B0 /* Main.swift */,
 				E8653A911E09DF210002D5B0 /* Bank.swift */,
+				E8653AC51E0AF4170002D5B0 /* Transaction.swift */,
 				E8653A931E09DF2A0002D5B0 /* Person.swift */,
+				E8653AC11E0AEC1E0002D5B0 /* Employee.swift */,
+				E8653AC31E0AEC250002D5B0 /* Customer.swift */,
 				E8653A951E09DF310002D5B0 /* Account.swift */,
+				E8653ABD1E0AEA050002D5B0 /* SavingsAccount.swift */,
+				E8653ABF1E0AEA0B0002D5B0 /* CheckingAccount.swift */,
 				E8653A791E09DEF10002D5B0 /* Info.plist */,
 			);
 			path = Bank;
@@ -211,8 +226,13 @@
 			files = (
 				E8653A941E09DF2A0002D5B0 /* Person.swift in Sources */,
 				E8653A961E09DF310002D5B0 /* Account.swift in Sources */,
+				E8653ABE1E0AEA050002D5B0 /* SavingsAccount.swift in Sources */,
+				E8653AC41E0AEC250002D5B0 /* Customer.swift in Sources */,
+				E8653AC21E0AEC1E0002D5B0 /* Employee.swift in Sources */,
 				E8653A901E09DEFA0002D5B0 /* Main.swift in Sources */,
 				E8653A921E09DF210002D5B0 /* Bank.swift in Sources */,
+				E8653AC01E0AEA0B0002D5B0 /* CheckingAccount.swift in Sources */,
+				E8653AC61E0AF4170002D5B0 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

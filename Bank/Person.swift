@@ -8,19 +8,41 @@
 
 import Foundation
 
-class Person: Hashable {
+class Person {
     let firstName: String
-    let salt: UInt32
     let lastName: String
-    var isEmployee: Bool
-    var isCustomer: Bool
+    let UUID: Int
     
-    
-    init(firstName: String, lastName: String) {
-        self.firstName = firstName
-        self.lastName = lastName
-        salt = arc4random_uniform(UInt32(Int.max))
+    var jsonData: [String: Any] {
+        let propertyDictionary: [String: Any] = ["firstName": firstName, "lastName" : lastName, "UUID": UUID]
+        return propertyDictionary
     }
     
+    init(firstName: String, lastName: String) {
+        let salt = Int(arc4random_uniform(UInt32.max))
+        let UUID = firstName.hashValue &+ lastName.hashValue
+        
+        self.UUID = salt.hashValue ^ UUID.hashValue
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+    
+    init(firstName: String, lastName: String, UUID: Int) {
+        self.UUID = UUID
+        self.firstName = firstName
+        self.lastName = lastName
+    }
     
 }
+
+extension Person: Hashable {
+    var hashValue: Int {
+        return UUID
+    }
+    
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        return lhs === rhs
+    }
+}
+
+
